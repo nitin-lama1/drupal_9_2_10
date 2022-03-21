@@ -8,11 +8,11 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a 'Location & Time' block.
+ * Provides a 'Location & Timezone' block.
  *
  * @Block(
  * id = "location_timezone_block",
- * admin_label = @Translation("Location & Time"),
+ * admin_label = @Translation("Location & Timezone"),
  * )
  */
 class LocationTimezoneBlock extends BlockBase implements ContainerFactoryPluginInterface {

@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Configure LocationTimezone settings for this site.
+ * Configure LocationTimezone settings form.
  */
 class LocationTimezone extends ConfigFormBase {
 
