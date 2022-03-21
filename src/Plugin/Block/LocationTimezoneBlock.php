@@ -71,7 +71,7 @@ class LocationTimezoneBlock extends BlockBase implements ContainerFactoryPluginI
    * {@inheritdoc}
    */
   public function getCacheMaxAge() {
-    return 60;
+    return 0;
   }
 
 }
