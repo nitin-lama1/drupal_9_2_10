@@ -1,0 +1,5 @@
+name: 'Location & Timezone'
+type: module
+description: 'Module to fetch location & convert timezone'
+core_version_requirement: ^8.8 || ^9
+package: 'Development'
