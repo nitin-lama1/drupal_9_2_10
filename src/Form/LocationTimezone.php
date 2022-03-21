@@ -35,13 +35,13 @@ class LocationTimezone extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => t('Country'),
       '#default_value' => $config->get('country'),
-      '#required' => TRUE
+      '#required' => TRUE,
     ];
     $form['city'] = [
       '#type' => 'textfield',
       '#title' => t('City'),
       '#default_value' => $config->get('city'),
-      '#required' => TRUE
+      '#required' => TRUE,
     ];
     $timezone = [
       '0' => 'Options in the select list',
@@ -60,7 +60,7 @@ class LocationTimezone extends ConfigFormBase {
       '#description' => 'Select the desired timezone.',
       '#options' => $timezone,
       '#default_value' => $config->get('timezone'),
-      '#required' => TRUE
+      '#required' => TRUE,
     ];
 
     return parent::buildForm($form, $form_state);

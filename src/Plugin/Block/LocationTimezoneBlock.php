@@ -30,7 +30,6 @@ class LocationTimezoneBlock extends BlockBase implements ContainerFactoryPluginI
    * @param mixed $plugin_definition
    * @param \Drupal\location_timezone\Services\TimezoneConvert $time_zone_convert
    *   Custom TimezoneConvert service.
-   *
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, TimezoneConvert $time_zone_convert) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -61,12 +60,18 @@ class LocationTimezoneBlock extends BlockBase implements ContainerFactoryPluginI
     // Function from the custom service to get the data.
     $data = $this->timezone->getCurrentDateTime();
     $return = [
-     '#theme' => 'location_timezone_block',
-     '#value' => $data,
-     '#cache' => ['max-age' => 0]
-   ];
+      '#theme' => 'location_timezone_block',
+      '#value' => $data,
+    ];
 
-   return $return;
+    return $return;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    return 60;
   }
 
 }
